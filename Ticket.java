@@ -17,10 +17,10 @@ public class Ticket implements Comparable {
 	}
 	
 	public int compareTo( Ticket o ) {
-		if( o.getVIPLevel() > this.getVIPLevel() ) {
+		if( o.getLevel() > this.getLevel() ) {
 			return -1 ;
 		}
-		else if( o.getVIPLevel() == this.getVIPLevel() ) {
+		else if( o.getLevel() == this.getLevel() ) {
 			return 0 ;
 		}
 		else { // o > this
