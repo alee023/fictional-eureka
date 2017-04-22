@@ -41,21 +41,4 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket> {
 		return( _data.remove( 0 ) ) ;
 	}
 	
-	public static void main( String[] args ) {
-		ArrayPriorityQueue<Integer> test = new ArrayPriorityQueue() ;
-		test.add( 2 ) ;
-		test.add( 0 ) ;
-		test.add( 1 ) ;
-		test.add( 3 ) ;
-		
-		System.out.println( test.peekMin() ) ;
-		System.out.println( test.removeMin()) ;
-		
-		System.out.println( test.removeMin()) ;
-		
-		System.out.println( test.removeMin()) ;
-		
-		System.out.println( test.removeMin()) ;
-		System.out.println( test.isEmpty() ) ; // true 
-	}
 }
