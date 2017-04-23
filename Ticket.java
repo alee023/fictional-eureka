@@ -1,4 +1,4 @@
-public class Ticket implements Comparable {
+public class Ticket implements Comparable<Ticket> {
 	private int ID ;
 	private int VIPLevel ;
 	private String problem ;
