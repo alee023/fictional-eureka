@@ -2,7 +2,7 @@
 
 import java.util.ArrayList ;
 
-public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket> {
+public class ArrayPriorityQueue<Ticket extends Comparable<Ticket>> implements PriorityQueue<Ticket> {
 	
 	private ArrayList<Ticket> _data ;
 	
@@ -33,12 +33,12 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket> {
 	
 	// returns the smallest item stored in this priority queue without removing item
 	public Ticket peekMin() {
-		return( _data.get( 0 ) ) ;
+		return( _data.get( _data.size() -1 ) ) ;
 	}
 	
 	// removes and returns the smallest item stored in this priority queue
 	public Ticket removeMin() {
-		return( _data.remove( 0 ) ) ;
+		return( _data.remove( _data.size() - 1 ) ) ;
 	}
 	
 }

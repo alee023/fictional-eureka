@@ -1,4 +1,5 @@
 public interface PriorityQueue<Ticket> {
+	
 	// adds an item to this priority queue
 	public void add( Ticket x ) ;
 	// returns true if this stack is empty, otherwise return false
@@ -7,4 +8,5 @@ public interface PriorityQueue<Ticket> {
 	public Ticket peekMin() ;
 	// removes and returns the smallest item stored in this priority queue
 	public Ticket removeMin() ;
+	
 }
