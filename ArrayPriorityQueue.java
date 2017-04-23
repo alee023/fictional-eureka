@@ -2,7 +2,7 @@
 
 import java.util.ArrayList ;
 
-public class ArrayPriorityQueue<Ticket extends Comparable<Ticket>> implements PriorityQueue<Ticket> {
+public class ArrayPriorityQueue<Ticket extends Comparable> implements PriorityQueue<Ticket> {
 	
 	private ArrayList<Ticket> _data ;
 	

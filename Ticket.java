@@ -3,16 +3,16 @@ public class Ticket implements Comparable {
 	private int VIPLevel ;
 	private String problem ;
 	private boolean solved ;
-	private String user ;
+	private String name ;
 	private String solution ;
 
 	// constructor
-	public Ticket( int id, int leve, String prob, String username ) {
+	public Ticket( int id, int level, String prob, String cust ) {
 		ID = id ;
-		VIPLevel = leve ;
+		VIPLevel = level ;
 		problem = prob ;
 		solved = false ;
-		user = username ;
+		name = cust ;
 		solution = "" ;
 	}
 	
@@ -29,6 +29,7 @@ public class Ticket implements Comparable {
 	}
 	
 	// =================== ACCESSORS =====================
+	
 	public int getID() {
 		return ID ;
 	}
@@ -46,11 +47,21 @@ public class Ticket implements Comparable {
 	}
 	
 	public String getName() {
-		return user ;
+		return name ;
 	}
 	
 	public String getSoln() {
 		return solution ;
+	}
+	
+	// ================== MUTATORS ======================
+	
+	public void setSoln( String soln ) {
+		solution = soln ;
+	}
+	
+	public void setSolved( boolean x ) { // x should be true
+		solved = x ;
 	}
 	
 }
