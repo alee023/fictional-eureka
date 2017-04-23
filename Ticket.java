@@ -56,6 +56,12 @@ public class Ticket implements Comparable<Ticket> {
 	
 	// ================== MUTATORS ======================
 	
+	/*
+	public void setLvl( int x ) {
+		VIPLevel = x ;
+	}
+	*/
+	
 	public void setSoln( String soln ) {
 		solution = soln ;
 	}

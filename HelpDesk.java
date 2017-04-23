@@ -16,11 +16,11 @@ public class HelpDesk {
 		
 		probNum ++ ;
 		System.out.println( "NUMBER " + probNum + "!\nHello, what is your name?" ) ;
-		String name = Keyboard.readString() ; // possibility of there being a space? IDK
+		String name = Keyboard.readString() ;
 		
 		System.out.println( "Ah, thank you. And what is your problem?" ) ;
 		// life, money, school, people, health, relationship
-		String problem = Keyboard.readWord() ;
+		String problem = Keyboard.readString() ;
 		
 		
 		int level = ( int )( Math.random() * 50 ) ;
@@ -36,19 +36,20 @@ public class HelpDesk {
 		x.setSolved( true ) ; 
 		String prob = x.getProb() ;
 		
-		if( prob.toLowerCase().equals( "life" )) {
+		if( prob.toLowerCase().indexOf( "life" ) >= 0 ) {
 			x.setSoln( "Call 1-800-273-8255 immediately." ) ;
+			// x.setLvl( 0 ) ; // would be nice :( 
 		}
-		else if( prob.toLowerCase().equals( "money" )) {
+		else if( prob.toLowerCase().indexOf( "money" ) >= 0 ) {
 			x.setSoln( "Reach out to family. Start saving. Get a job or negotiate for higher salary." ) ;
 		}
-		else if( prob.toLowerCase().equals( "relationship" )) {
+		else if( prob.toLowerCase().indexOf( "relationship" ) >= 0 ) {
 			x.setSoln( "Hit the lawyer, delete the gym, Facebook up." ) ;
 		}
-		else if( prob.toLowerCase().equals( "people" )) {
+		else if( prob.toLowerCase().indexOf( "people" ) >= 0 ) {
 			x.setSoln( "To to them about your problems." ) ;
 		}
-		else if( prob.toLowerCase().equals( "health" )) {
+		else if( prob.toLowerCase().indexOf( "health" ) >= 0 ) {
 			x.setSoln( "Seek a medical professional. Eat healthy, exercise, and sleep well." ) ;
 		}
 		else {
@@ -73,13 +74,19 @@ public class HelpDesk {
 		
 		HelpDesk hihello = new HelpDesk() ;
 		
-		// enqueue n dequeue n enqueue n dequeue... 5 times?
-		for( int n = 0 ; n < 3 ; n ++ ) {
-			hihello.addTicket() ;
-		}
-		System.out.println( "\n\n" ) ;
-		for( int n = 0 ; n < 3 ; n ++ ) {
-			hihello.probDone() ;
+		// ( enqueue 5X, dequeue 5X ) X 5 or until Ctrl-C 
+		// basically, take 5 requests, then solve them. take another 5 reqs and solve and again and again
+		for( int i = 0 ; i < 5 ; i ++ ) {
+			
+			for( int n = 0 ; n < 5 ; n ++ ) {
+				hihello.addTicket() ;
+			}
+			
+			System.out.println( "\n\n" ) ;
+			
+			for( int n = 0 ; n < 5 ; n ++ ) {
+				hihello.probDone() ;
+			}
 		}
 	}
 	
