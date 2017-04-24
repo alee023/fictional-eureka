@@ -27,32 +27,32 @@ The help desk takes 5 problems and adds each to the ArrayPriorityList of tickets
 ( - ) int ID 
 <br>
 ( - ) int VIPLevel
-
+<br>
 ( - ) String problem
-
+<br>
 ( - ) boolean solved
-
+<br>
 ( - ) String name
-
+<br>
 ( - ) String solution
 
 
 ( + ) int compareTo( Ticket o ) // compares VIPLevel of this and o
-
+<br>
 ( + ) int getID()
-
+<br>
 ( + ) int getLevel()
-
+<br>
 ( + ) String getProb()
-
+<br>
 ( + ) boolean isSolved()
-
+<br>
 ( + ) String getName()
-
+<br>
 ( + ) String getSoln()
-
+<br>
 ( + ) void setSoln( String soln )
-
+<br>
 ( + ) void setSolved( boolean x )
 
 ## Embellishments
