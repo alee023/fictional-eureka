@@ -44,7 +44,7 @@ public class HelpDesk {
 			x.setSoln( "Reach out to family. Start saving. Get a job or negotiate for higher salary." ) ;
 		}
 		else if( prob.toLowerCase().indexOf( "relationship" ) >= 0 ) {
-			x.setSoln( "Hit the lawyer, delete the gym, Facebook up." ) ;
+			x.setSoln( "Hit the lawyer, delete the gym, Facebook up." ) ; // /r/relationships
 		}
 		else if( prob.toLowerCase().indexOf( "people" ) >= 0 ) {
 			x.setSoln( "To to them about your problems." ) ;
@@ -60,13 +60,16 @@ public class HelpDesk {
 	
 	// solves problem, prints soln, and dequeues ticket
 	public void probDone() {
+		
 		Ticket curr = tickets.peekMin() ;
 		findSoln( curr ) ; // soln var filled
+		
 		System.out.println(( curr.getName()) + "? Person " + ( curr.getID()) + "?" ) ;
 		if( curr.isSolved()) {
 			System.out.print( "Your problem has been solved.\nWe suggest that you... " ) ;
 		}
 		System.out.println( curr.getSoln() + "\nWe hope to see you again :).\n" ) ;
+		
 		tickets.removeMin() ;
 	}
 	
