@@ -7,6 +7,7 @@
 The help desk takes 5 problems and adds each to the ArrayPriorityList of tickets. Afterwards, those 5 tickets will be dequeued. The help desk is ready to take another 5 tickets.
 
 ( - ) ArrayPriorityList<Ticket> tickets // stores the tickets
+<br>
 ( - ) int probNum // stores the number of problems. It will be used to ID the person (like Person #5 if he/she is the 5th person)
 
 ( + ) void addTicket()
