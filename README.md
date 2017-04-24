@@ -24,8 +24,8 @@ The help desk takes 5 problems and adds each to the ArrayPriorityList of tickets
 3. Ticket is dequeued
 
 ### TICKET
-( - ) int ID
-
+( - ) int ID 
+<br>
 ( - ) int VIPLevel
 
 ( - ) String problem
